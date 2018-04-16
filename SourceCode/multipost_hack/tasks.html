@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Multi Post</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700|Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+    <!-- Custom Stylesheet -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js" type="application/javascript"></script>
+    <script src="js/app.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <style>
+        body {
+            background-image: url("h1.png");
+        }
+    </style>
+</head>
+<body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="container"ng-controller="TasksController">
+    <div class="top">
+        <h1 id="title" class="hidden"><span id="logo">Multi Post</span></h1>
+    </div>
+    <div class="login-box animated fadeInUp">
+        <div class="box-header">
+            <h2>Tasks</h2>
+        </div>
+        <a href="home.html"><button>About</button></a>
+        <a href="profile.html"><button>Profile</button></a>
+        <a href="tasks.html"><button> Posts </button></a>
+        <a href="login.html"><button>Sign out</button></a>
+        <br/>
+
+        <div ng-controller="TasksController">
+            <div>
+                <h1>Write your post here!.</h1>
+
+                <td><p align="left"></p></td>
+                <textarea rows="4" cols="50" placeholder="Enter the Post here">
+                </textarea>
+            </div>
+            <br/>
+
+            <b style="text-align: center">Post with Multiple Social Media listed below:</b> <br/><br/><br/>
+            <!--<fb:login-button size="large"
+                             scope="public_profile,email" onlogin="checkLoginState();">
+            </fb:login-button>-->
+            <input type="checkbox" name="tandc" id="tandc" value="true">
+            <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+
+            <input type="checkbox" name="tandc" id="tandc1" value="true">
+            <a class="twitter-share-button"
+               href="https://twitter.com/intent/tweet?text=Hello%20world"
+               data-size="large">
+                Tweet</a>
+
+            <input type="checkbox" name="tandc" id="tandc2" value="true">
+            <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+            <script type="IN/Share"></script>
+            <br/>
+            <b style="text-align: center">Set Date and Time to post below:</b> <br/>
+            <input id="date" type="date" value="2018-01-01">
+            <input id="time" type="time">
+            <br/><br/>
+            <button id="register" name="register" ng_click="register(topic,comment)">Post</button><br/><br/>
+
+
+            </form>
+
+        </div>
+
+
+    </div>
+    <!--<div id="fb-root"></div>-->
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12&appId=1760325337421995&autoLogAppEvents=1';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+</div>
+
+</body>
+</html>
